@@ -1,1 +1,41 @@
 /*  your css code here. If applicable */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0; /* Light background for contrast */
+}
+
+.star {
+    position: relative;
+    display: block;
+    color: transparent;
+    width: 100px; /* Size of the star */
+    height: 100px; /* Size of the star */
+    border-left:  30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom:  50px solid yellow;
+    transform: rotate(35deg);
+}
+
+.star:before,
+.star:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -30px;
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 50px solid yellow;
+}
+
+.star:before {
+    transform: rotate(70deg);
+}
+
+.star:after {
+    transform: rotate(-70deg);
+}
